@@ -4,8 +4,16 @@ import Link from 'next/link'
 import GoogleIcon from '@public/google.svg'
 import Image from 'next/image'
 import { Github } from 'lucide-react'
+import { getServerSession } from 'next-auth'
+import { authOption } from '@/lib/auth'
+import { redirect } from 'next/navigation'
 
-const SignUpPage = () => {
+const SignUpPage = async () => {
+    const session = await getServerSession(authOption)
+
+    if (session) {
+        return redirect('/home')
+    }
     return (
         <div className='mt-24 rounded bg-black/80 py-10 px-6 md:mt-0 md:max-w-sm md:px-14'>
             <form>

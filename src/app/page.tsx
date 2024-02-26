@@ -1,14 +1,12 @@
-'use client'
+import { authOption } from '@/lib/auth'
+import { getServerSession } from 'next-auth'
+import { redirect } from 'next/navigation'
 
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/navigation'
-
-export default function Home() {
-    const router = useRouter()
-    return (
-        <main className='p-4'>
-            <h1>Anasayfa</h1>
-            <Button onClick={() => router.push('/login')}>Click me</Button>
-        </main>
-    )
+export default async function Home() {
+    const session = await getServerSession(authOption)
+    if (!session) {
+        return redirect('/login')
+    } else {
+        return redirect('/home')
+    }
 }
