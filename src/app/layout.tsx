@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
-import NextAuthProvider from '@/containers/next-auth-provider'
+import NextAuthProvider from '@/components/next-auth-provider'
 
 const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans' })
 

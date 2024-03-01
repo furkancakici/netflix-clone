@@ -1,11 +1,7 @@
-import { getServerSession } from 'next-auth'
-import { authOption } from '@/lib/auth'
-import Navbar from '@/containers/navbar'
+import { ReactNode } from 'react'
 
-const HomePage = async () => {
-    const session = await getServerSession(authOption)
-
-    return <>Furkan</>
+const HomePage = ({ children }: { children: ReactNode }) => {
+    return 'asdasdf'
 }
 
 export default HomePage

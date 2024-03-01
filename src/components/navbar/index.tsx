@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Logo from '@public/netflix_logo.svg'
 import { usePathname } from 'next/navigation'
 import { Bell, Search } from 'lucide-react'
+import UserNav from './user-nav'
 
 type LinkProps = {
     name: string
@@ -22,7 +23,7 @@ const links: LinkProps[] = [
 const Navbar = () => {
     const pathName = usePathname()
     return (
-        <div className='mx-auto max-w-7xl justify-between items-center px-5 sm:px-6 lg:px-8 py-5 flex'>
+        <div className='mx-auto max-w-7xl justify-between items-center py-5 flex'>
             <div className='flex gap-x-14 items-center'>
                 <Link href='/home' className='w-32'>
                     <Image src={Logo} alt='Netflix Logo' priority />
@@ -44,9 +45,10 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className='flex items-center'>
-                <Search className='w-6 h-6 text-white' />
-                <Bell className='w-6 h-6 text-white ml-4' />
+            <div className='flex items-center gap-x-8 *:cursor-pointer'>
+                <Search className='size-6 text-gray-300' />
+                <Bell className='size-6 text-gray-300' />
+                <UserNav />
             </div>
         </div>
     )
