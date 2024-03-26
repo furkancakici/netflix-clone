@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { addTowatchlist, deleteFromWatchlist } from '@/app/action'
 import { usePathname } from 'next/navigation'
 
-interface iAppProps {
+interface AppProps {
     title: string
     overview: string
     movieId: number
@@ -19,17 +19,7 @@ interface iAppProps {
     time: number
 }
 
-export function MovieCard({
-    movieId,
-    overview,
-    title,
-    wachtListId,
-    watchList,
-    youtubeUrl,
-    age,
-    time,
-    year
-}: iAppProps) {
+const MovieCard = ({ movieId, overview, title, wachtListId, watchList, youtubeUrl, age, time, year }: AppProps) => {
     const [open, setOpen] = useState(false)
     const pathName = usePathname()
     return (
@@ -82,3 +72,5 @@ export function MovieCard({
         </>
     )
 }
+
+export default MovieCard

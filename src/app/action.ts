@@ -5,7 +5,7 @@ import prisma from '@/lib/db'
 import { getServerSession } from 'next-auth'
 import { authOption } from '@/lib/auth'
 
-export async function addTowatchlist(formData: FormData) {
+export const addTowatchlist = async (formData: FormData) => {
     'use server'
 
     const movieId = formData.get('movieId')
@@ -22,7 +22,7 @@ export async function addTowatchlist(formData: FormData) {
     revalidatePath(pathname)
 }
 
-export async function deleteFromWatchlist(formData: FormData) {
+export const deleteFromWatchlist = async (formData: FormData) => {
     'use server'
 
     const watchlistId = formData.get('watchlistId') as string

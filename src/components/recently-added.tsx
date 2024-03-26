@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { MovieCard } from './movie-card'
+import MovieCard from './movie-card'
 import { getServerSession } from 'next-auth'
 import { authOption } from '@/lib/auth'
 
