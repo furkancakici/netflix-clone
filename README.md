@@ -2,7 +2,7 @@
 
 Netflix Clone is a web application built using Next.js, Supabase, and Prisma. It replicates the interface and functionality of the popular streaming platform Netflix. The project utilizes Shadcn-UI and Tailwind CSS for enhanced user experience and design aesthetics.
 
-Live: [Netflix Clone App](https://covid-tracker-furkancakici.vercel.app/)
+Live: [Netflix Clone App](https://netflix-clone-omega-khaki.vercel.app/)
 
 ## What is Tech Stack?
 
