@@ -2,6 +2,7 @@ import Image from 'next/image'
 import MovieCard from './movie-card'
 import { getServerSession } from 'next-auth'
 import { authOption } from '@/lib/auth'
+import prisma from '@/lib/db'
 
 const getRecentlyMovieData = async (userId: string) => {
     const data = await prisma?.movie.findMany({

@@ -1,4 +1,5 @@
 import { Button } from './ui/button'
+import prisma from '@/lib/db'
 
 const getMovieData = async () => {
     const data = await prisma?.movie.findFirst({
