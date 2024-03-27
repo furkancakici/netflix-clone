@@ -1,8 +1,7 @@
 import MovieVideo from '@/components/movie-video'
 import RecentlyAdded from '@/components/recently-added'
-import { ReactNode } from 'react'
 
-const HomePage = ({ children }: { children: ReactNode }) => {
+const HomePage = () => {
     return (
         <div className='p-5 lg:p-0'>
             <MovieVideo />
